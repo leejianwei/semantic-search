@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: Template to start the nlu search blog
+Description: Template to provision OpenSearch cluster and SageMaker Notebook for semantic search
 
 Resources:
   CodeRepository:
