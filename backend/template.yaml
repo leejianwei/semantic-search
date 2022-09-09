@@ -27,7 +27,7 @@ Resources:
   PostGetSimilarTextFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: s3://aws-ml-blog/artifacts/nlu-search/lambda.zip
+      CodeUri: s3://lijianwe-semantic-search/lambda/lambda.zip
       Handler: app.lambda_handler
       Runtime: python3.7
       Environment:
