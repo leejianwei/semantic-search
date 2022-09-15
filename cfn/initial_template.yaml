@@ -74,8 +74,8 @@ Resources:
         IndexDocument: index.html
         ErrorDocument: error.html
 
-  Domain:
-    Type: AWS::Elasticsearch::Domain
+  OpenSearchServiceDomain:
+    Type: AWS::OpenSearchService::Domain
     Properties:
       AccessPolicies:
         Version: 2012-10-17
@@ -85,23 +85,31 @@ Resources:
               AWS: !Ref AWS::AccountId
             Action: 'es:*'
             Resource: !Sub arn:aws:es:${AWS::Region}:${AWS::AccountId}:domain/*/*
-      ElasticsearchVersion: '7.10'
-      ElasticsearchClusterConfig:
-        InstanceType: "t2.small.elasticsearch"
+      EngineVersion: 'OpenSearch_1.3'
+      ClusterConfig:
+        InstanceType: "m5.large.search"
       EBSOptions:
         EBSEnabled: True
         VolumeSize: 10
-        VolumeType: gp2
+        VolumeType: 'gp2'
 
 
 Outputs:
-  esHostName:
-    Description: Elasticsearch hostname
-    Value: !GetAtt Domain.DomainEndpoint
+  DomainEndpoint:
+    Value:
+      'Fn::GetAtt':
+        - OpenSearchServiceDomain
+        - DomainEndpoint
 
-  esDomainName:
-    Description: Elasticsearch domain name
-    Value: !Ref Domain
+  osArn:
+    Value:
+      'Fn::GetAtt':
+        - OpenSearchServiceDomain
+        - Arn
+
+  osDomainName:
+    Description: OpenSearch domain name
+    Value: !Ref OpenSearchServiceDomain
 
   s3BucketTraining:
     Description: S3 bucket name for training
