@@ -149,14 +149,14 @@ class App extends React.Component {
           </Grid> */}
           <Grid item xs={10}>
             <Typography variant="h2" style={{ textAlign: "center" }}>
-              AWS Semantic Search
+              Semantic Search with Amazon OpenSearch
             </Typography>
           </Grid>
 
 
           <Grid item xs={10}>
             <Paper className={classes.paper}>
-              <Typography variant="h5">Enter a question you have about the product. For example "Does this work with xbox?" </Typography>
+              <Typography variant="h5">Enter a question you have about the product, for example "Does this work with xbox?" </Typography>
               <p />
               <form noValidate autoComplete="off" onSubmit={this.handleSearchSubmit}>
                 <Input
