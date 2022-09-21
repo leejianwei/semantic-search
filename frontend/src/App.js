@@ -189,7 +189,7 @@ class App extends React.Component {
             <Grid container spacing={2} columns={2}>
               <Grid item xs={6}>
                 <Paper className={classes.paper2}>
-                  <Typography variant="h6">Samantic Search</Typography>
+                  <Typography variant="h6">Semantic Search</Typography>
                   <Grid container columns={1}>
                     {this.state.semantics.map((tile) => (
                       <Grid item xs={12}>
