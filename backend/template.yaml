@@ -14,6 +14,8 @@ Parameters:
     Type: String
   SagemakerEndpoint:
     Type: String
+  LambdaZipFile:
+    Type: String
 Globals:
   Function:
     Timeout: 60
@@ -27,9 +29,12 @@ Resources:
   PostGetSimilarTextFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri:  s3://ee-assets-prod-us-east-1/modules/1e02deca779a4be58b9d50513a464cdc/v1/semanticsearch/lambda.zip
+      CodeUri:
+        Bucket: 
+          Ref: LambdaZipFile
+        Key: 'lambda/lambda.zip'
       Handler: app.lambda_handler
-      Runtime: python3.7
+      Runtime: python3.8
       Environment:
         Variables:
           ES_ENDPOINT:
