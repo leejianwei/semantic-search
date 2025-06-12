@@ -1,1 +1,8 @@
 sentence-transformers
+boto3
+opensearch-py
+pandas
+numpy
+tqdm
+langchain
+langchain-aws
