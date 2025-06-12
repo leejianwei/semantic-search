@@ -57,7 +57,7 @@ When you submit a query:
 
 ## Module Structure
 
-This tutorial is organized into 5 progressive modules:
+This tutorial is organized into 6 progressive modules:
 
 ### Module 1: BM25 vs. Semantic Similarity
 **File**: `Module 1 - Difference between BM25 similarity and Semantic similarity.ipynb`
@@ -95,6 +95,17 @@ This tutorial is organized into 5 progressive modules:
 - Performance evaluation
 
 ![Fine-Tuning Results](./semantic_search_with_fine_tuning.png)
+
+### Module 6: Agent Search with OpenSearch
+**File**: `Module 6 - Agent Search with OpenSearch.ipynb`
+- Implement intelligent search agents using OpenSearch ML Commons
+- Create conversational search experiences
+- Demonstrate multi-step reasoning and query orchestration
+- Build agents that can use multiple search strategies
+- Advanced features: query refinement, result summarization, and performance monitoring
+- Production deployment considerations for agent-based search systems
+
+![Agent Search Architecture](https://docs.aws.amazon.com/images/opensearch-service/latest/developerguide/images/ml-commons-agents-architecture.png)
 
 ## Quick Start
 
@@ -135,6 +146,7 @@ jupyter notebook
 # 3. Module 3 - Semantic Search.ipynb
 # 4. Module 4 - Fullstack Semantic Search.ipynb
 # 5. Module 5 - Semantic Search with Fine Tuned Model.ipynb
+# 6. Module 6 - Agent Search with OpenSearch.ipynb
 ```
 
 ### 4. Frontend Development (Module 4)
@@ -166,7 +178,7 @@ This project uses the **Amazon Product Q&A Dataset** containing over 3 million q
 
 ```
 semantic-search/
-├── Module 1-5 *.ipynb          # Tutorial notebooks
+├── Module 1-6 *.ipynb          # Tutorial notebooks
 ├── backend/                     # Lambda API backend
 │   ├── lambda/app.py           # Main Lambda function
 │   └── template.yaml           # SAM template
